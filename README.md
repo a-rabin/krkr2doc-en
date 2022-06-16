@@ -1,2 +1,1 @@
-# 吉里吉里2 ドキュメント
-吉里吉里2ドキュメントミラー
+KiriKiri2 Documentation Mirror
