@@ -1,1 +1,1 @@
-#KiriKiri2 Documentation Mirror
+KiriKiri2 Documentation Mirror
