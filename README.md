@@ -1,1 +1,2 @@
-KiriKiri2 Documentation Mirror
+#English Documentations of the KiriKiri Game Engine
+
