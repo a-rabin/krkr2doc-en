@@ -2,14 +2,13 @@
 <tdb>
 	<tag id="tag_animstart">
 		<tagname>animstart</tagname>
-		<tagshortinfo>アニメーションの開始</tagshortinfo>
-		<tagremarks>　アニメーションを、指定したセグメントで、指定したラベルから開始します。<br />　セグメントは、一つのレイヤ、一つのアニメーション定義ファイル ( asd ファイル ) で複数のアニメーションを同時に実行するための概念で、一つのレイヤで複数のセグメントを使用でき、各セグメントで同時に別々のラベルからアニメーションを開始することができます。<br />　セグメント 0 は特別なセグメントで、レイヤに画像が読み込まれたのと同時に実行されるアニメーションで、このタグや <ref>animstop</ref> タグではセグメント 0 は指定できません。<br /></tagremarks>
-		<attr id="attr_animstart_layer">
+		<tagshortinfo>Start of Animation/tagshortinfo><!-- アニメーションの開始 -->
+		<tagremarks>　Starts the animation from the specified segment and label. <br />　Segments are a concept for running multiple animations simultaneously on a single layer, in a single animation definition file (asd file), allowing multiple segments on a single layer, with each segment starting an animation from a separate label at the same time. <br />　Segment 0 is a special type of segment in that when an animation runs at the same time as when the image is loaded onto the layer, this type of tag here <ref>animstop</ref> is unable to identify segment 0<br /></tagremarks>
 			<attrname>layer</attrname>
-			<attrshortinfo>対象レイヤ</attrshortinfo>
+			<attrshortiayer</attrshortinfo>
 			<attrrequired>yes</attrrequired>
-			<attrformat>&quot;base&quot; または 0 以上の整数</attrformat>
-			<attrinfo>　アニメーションを開始するレイヤを指定します。<br />&quot;base&quot; を指定すると 背景レイヤ、 0 以上の整数を指定すると、対応する前景レイヤを表します。　指定したレイヤには、アニメーション情報が読み込まれていないとなりません。</attrinfo>
+			<attrformat>&quot;base&quot; Or an integer greater than or equal to 0</attrformat>
+			<attrinfo>　Specifies the layer that initiates the animation。<br />if &quot;base&quot; is specified, and if the background layer is set to be greater or equal to 0, the corresponding foreground layer will be displayed. It is important to note that the specified layer must have the animation information loaded in.</attrinfo>
 		</attr>
 		<attr id="attr_animstart_page">
 			<attrname>page</attrname>
