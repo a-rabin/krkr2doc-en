@@ -25,7 +25,7 @@
 {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;メンバやメンバメソッドやメンバプロパティを記述</span><br />
 <br />
-&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;classname()&nbsp;<span class="comment">//&nbsp;コンストラクタ</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;classname()&nbsp;<span class="comment">//&nbsp;Constructor</span><br />
 &nbsp;&nbsp;&nbsp;&nbsp;{<br />
 &nbsp;&nbsp;&nbsp;&nbsp;}<br />
 <br />
@@ -48,11 +48,11 @@
 <br />
 
 <br />
-<code class="bq"><span class="weak">例:</span><br />&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;test<br />
+<code class="bq"><span class="weak">Usage:</span><br />&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;test<br />
 &nbsp;&nbsp;&nbsp;&nbsp;{<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;test()<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;コンストラクタ</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;Constructor</span><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;ここに、オブジェクトが作成されるときに処理する内容を書く</span><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;variable&nbsp;=&nbsp;0;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
@@ -82,7 +82,7 @@
 <br />
 クラスに対して instanceof 演算子を &quot;Class&quot; を伴って使用した場合は真になります(上記の例で言うと、test instanceof &quot;Class&quot; は真)。<br />
 </div></div>
-<h1><a id="id52" name="id52">オブジェクトの作成</a>
+<h1><a id="id52" name="id52">Creating Objects</a>
 </h1><div class="para"><div>
 　宣言したクラスのオブジェクトを作成するには new 演算子を使います。<br />
 　new 演算子の後には、関数呼び出しと同様に、クラス名と、コンストラクタに渡す引数を指定します。<br />
@@ -112,7 +112,7 @@
 　特に、クラスのメソッドやプロパティ内でそのクラスのオブジェクトを作成する場合、あるいはそのクラスのスーパークラスのオブジェクトを作成する場合、以下のようにするとエラーになります。<br />
 
 <br />
-<code class="bq"><span class="weak">例:</span><br />&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Test<br />
+<code class="bq"><span class="weak">Usage:</span><br />&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Test<br />
 &nbsp;&nbsp;&nbsp;&nbsp;{<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;Test()&nbsp;<span class="comment">//&nbsp;コンストラクタ</span><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
@@ -131,7 +131,7 @@
 <br />
 
 <br />
-<code class="bq"><span class="weak">例:</span><br />&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Test<br />
+<code class="bq"><span class="weak">Usage:</span><br />&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Test<br />
 &nbsp;&nbsp;&nbsp;&nbsp;{<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;Test()&nbsp;<span class="comment">//&nbsp;コンストラクタ</span><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
@@ -146,7 +146,7 @@
 <br />
 
 </div></div>
-<h1><a id="id53" name="id53">オブジェクトの無効化</a>
+<h1><a id="id53" name="id53">Destroying Objects</a>
 </h1><div class="para"><div>
 　TJS2 では、オブジェクトが削除される際、オブジェクトの<a id="id54" name="id54" class="targanchor"><dfn>無効化</dfn></a>とオブジェクトの削除、という２つの段階を踏みます。<br />
 　オブジェクトが無効化されるとき、 finalize メソッドが呼ばれ、そのオブジェクトは無効であるというマークがつけられます。以降のそのオブジェクトへのアクセスはすべて失敗し、例外が発生するようになります。オブジェクトが無効化されているかどうかは <a id="id55" name="id55" class="targanchor"><dfn>isvalid</dfn></a> 演算子で調べることができます。<br />
@@ -155,7 +155,7 @@
 <br />
 
 <br />
-<code class="bq"><span class="weak">例:</span><br />&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Test<br />
+<code class="bq"><span class="weak">Usage:</span><br />&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Test<br />
 &nbsp;&nbsp;&nbsp;&nbsp;{<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;variable;<br />
 <br />
@@ -189,12 +189,12 @@
 　TJS2 の delete 演算子は C++ の delete 演算子と違い、メンバやローカル変数を削除するための演算子です。オブジェクト自体を無効化したり削除したりはしませんが、メンバやローカル変数を削除したことにより結果的にオブジェクトの無効化や削除を引き起こすことはあります。<br />
 </div><br />
 </div></div>
-<h1><a id="id57" name="id57">オブジェクトへのアクセス</a>
+<h1><a id="id57" name="id57">Accessing objects</a>
 </h1><div class="para"><div>
 　作成したオブジェクトのメンバ変数、メソッド、メンバプロパティには、<a id="id58" name="id58" class="targanchor"><dfn>.</dfn></a> (メンバ選択) 演算子 または <a id="id59" name="id59" class="targanchor"><dfn>[ ]</dfn></a> (間接メンバ選択演算子) を用いてアクセスします。<br />
 
 <br />
-<code class="bq"><span class="weak">例:</span><br />&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;obj=new&nbsp;MyLayer(window,window.prmaryLayer)<br />
+<code class="bq"><span class="weak">Usage:</span><br />&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;obj=new&nbsp;MyLayer(window,window.prmaryLayer)<br />
 &nbsp;&nbsp;&nbsp;&nbsp;obj.method1();&nbsp;<span class="comment">//&nbsp;メソッドの呼び出し&nbsp;&nbsp;obj['method1']()&nbsp;でも同じ</span><br />
 &nbsp;&nbsp;&nbsp;&nbsp;obj.num&nbsp;=&nbsp;3;&nbsp;<span class="comment">//&nbsp;メンバ変数へ代入&nbsp;&nbsp;obj['num']=3&nbsp;でも同じ</span><br />
 &nbsp;&nbsp;&nbsp;&nbsp;obj.prop1++;&nbsp;<span class="comment">//&nbsp;メンバプロパティにアクセス&nbsp;&nbsp;obj['prop1']++&nbsp;でも同じ</span><br />
@@ -225,14 +225,14 @@
 
 </div></div>
 
-<h1><a id="id63" name="id63">継承</a>
+<h1><a id="id63" name="id63">Inheritence</a>
 </h1><div class="para"><div>
 　キーワード <a id="id64" name="id64" class="targanchor"><dfn>extends</dfn></a> を用いると、クラスを別のクラスから継承させることができます。継承とは、継承元のクラスのメンバを引き継ぐことです。<br />
 　継承する元となるクラスのことを<a id="id65" name="id65" class="targanchor"><dfn>スーパークラス</dfn></a>、継承したクラスのことを<a id="id66" name="id66" class="targanchor"><dfn>サブクラス</dfn></a>と呼びます。<br />
 　以下のようにしてクラスを宣言します。<br />
 
 <br />
-<code class="bq"><span class="weak">例:</span><br />&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Class1&nbsp;<span class="comment">//&nbsp;スーパークラス</span><br />
+<code class="bq"><span class="weak">Usage:</span><br />&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Class1&nbsp;<span class="comment">//&nbsp;スーパークラス</span><br />
 &nbsp;&nbsp;&nbsp;&nbsp;{<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;Class1()&nbsp;<span class="comment">//&nbsp;Class1&nbsp;コンストラクタ</span><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
