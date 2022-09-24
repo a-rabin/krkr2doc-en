@@ -7,15 +7,15 @@
 			<attrname>layer</attrname>
 			<attrshortiayer</attrshortinfo>
 			<attrrequired>yes</attrrequired>
-			<attrformat>&quot;base&quot; Or an integer greater than or equal to 0</attrformat>
+			<attrformat>&quot;base&quot; or an integer greater than or equal to 0</attrformat>
 			<attrinfo>　Specifies the layer that initiates the animation。<br />if &quot;base&quot; is specified, and if the background layer is set to be greater or equal to 0, the corresponding foreground layer will be displayed. It is important to note that the specified layer must have the animation information loaded in.</attrinfo>
 		</attr>
 		<attr id="attr_animstart_page">
 			<attrname>page</attrname>
 			<attrshortinfo>ページ</attrshortinfo>
 			<attrrequired>no</attrrequired>
-			<attrformat>&quot;back&quot; または &quot;fore&quot;</attrformat>
-			<attrinfo>　表(fore)画面を対象とするか、裏(back)画面を対象とするかを指定します。省略すると表ページであると見なされます。</attrinfo>
+			<attrformat>&quot;back&quot; or &quot;fore&quot;</attrformat>
+			<attrinfo>　Specifies whether the fore or back page is the target object. If not specified, it is assumed to be the front page.</attrinfo>
 		</attr>
 		<attr id="attr_animstart_seg">
 			<attrname>seg</attrname>
