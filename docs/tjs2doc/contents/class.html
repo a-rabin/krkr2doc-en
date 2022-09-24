@@ -51,11 +51,10 @@
 			<br />
 			Inside the class, you describe the variables, methods and properties that will be members of this class when it is created.<br />
 			<br />
-			Inside the class, there will always be one method with the same name as the class, it's called the <a id="id50" name="id50" class="targanchor"><dfn>constructor</dfn></a>.これは、 <a
-				id="id51" name="id51" class="targanchor"><dfn>new</dfn></a> 演算子を使用してオブジェクトを作成するとき、この関数が new
-			演算子の引数を伴って呼び出されます。<br />
+			Inside the class, there will always be one method with the same name as the class, it's called the <a id="id50" name="id50" class="targanchor"><dfn>constructor</dfn></a>
+			This means that when an object is created using the <a id="id51" name="id51" class="targanchor"><dfn><b>new</b></dfn></a> operator, the constructor method will be called with the arguments given in it.<br />
 			<br />
-			　クラス内には同様に、finalize という特殊なメソッドがあります。これは、オブジェクトが消滅するときに呼ばれるメソッドで、省略可能です。書かなくてもかまいません。<br />
+			In the same way, there can be a special <b>finalize</b> method. It's a method called when the object is destroyed, and is not mandatory. You can omit it.<br />
 			<br />
 
 			<br />
@@ -66,7 +65,7 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
 					class="comment">//&nbsp;Constructor</span><br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-					class="comment">//&nbsp;ここに、オブジェクトが作成されるときに処理する内容を書く</span><br />
+					class="comment">//&nbsp;Here is what will happen when the object is created</span><br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;variable&nbsp;=&nbsp;0;<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
 				<br />
@@ -75,21 +74,21 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
 					class="comment">//&nbsp;finalize&nbsp;メソッド</span><br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-					class="comment">//&nbsp;ここに、オブジェクトが破棄されるときに処理する内容を書く</span><br />
+					class="comment">//&nbsp;Here is what will happen when the object is destroyed</span><br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
 				<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;method1()<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-					class="comment">//&nbsp;メソッド</span><br />
+					class="comment">//&nbsp;Method</span><br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.inform(variable);<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
 				<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;variable;&nbsp;<span
-					class="comment">//&nbsp;メンバ変数</span><br />
+					class="comment">//&nbsp;Member variable</span><br />
 				<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property&nbsp;prop&nbsp;<span
-					class="comment">//&nbsp;メンバプロパティ</span><br />
+					class="comment">//&nbsp;Member property</span><br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getter()&nbsp;{&nbsp;return&nbsp;variable;&nbsp;}&nbsp;<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
@@ -98,8 +97,8 @@
 			<br />
 
 			<br />
-			クラスに対して instanceof 演算子を &quot;Class&quot; を伴って使用した場合は真になります(上記の例で言うと、test instanceof &quot;Class&quot;
-			は真)。<br />
+			You can use the <b>instanceof</b> operator towards a "Class" to test if it's really the instance of a class (In the instance above、<b>test instanceof &quot;Class&quot</b> will return true).
+			<br />
 		</div>
 	</div>
 	<h1><a id="id52" name="id52">Creating Objects</a>
