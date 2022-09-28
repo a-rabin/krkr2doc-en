@@ -4,7 +4,7 @@
 <html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>タグリファレンス</title>
+	<title>Tags references</title>
 	<meta name="author" content="W.Dee" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -15,18 +15,17 @@
 <body>
 
 <h1><a name="tags" id="tags">タグリファレンス</a></h1>
-<div class="para"><div>　KAG で使用可能なタグのリファレンスです。</div></div>
-<h1><a name="tag_overview" id="tag_overview">タグの概要</a></h1>
+<div class="para"><div>　Reference of tags that can be used in KAG</div></div>
+<h1><a name="tag_overview" id="tag_overview">Tags overview</a></h1>
 <div class="para"><div>
-　タグは、[ ] の間に囲まれたものです。基本的に半角英数小文字で記述します。
-　<span class="script">[</span> の次にすぐにタグ名を書きます。たとえば、trans
-というタグであれば <span class="script">[trans</span> となります。<br />
-　タグには、タグのオプションを指定するために属性というものがあります。なにも属性を指定しなくていい場合は、タグ名のあとに <span class="script">]</span> を書いてタグは終わりです。たとえば
+　Tags are enclosed between these [ ] square brackets. They are written in single-btyle alphanumeric characters.
+　A tag name is written after this  <span class="script">[</span> starting bracket. For example, a "trans" tag would
+written like this <span class="script">[trans</span> <br />
+　Tags have attributes to assign tag options. For instances where no attributes need to be assigned to the tag, simply write an ending bracket <span class="script">]</span> after the tag name. For example
 <span class="script">[ct]</span>
-となります。<br />
-　属性を指定する場合は、タグ名のあとや、前の属性のあとには必ず半角スペースを空けて、属性名を書きます。属性名の後には
-= を書き、その後に属性の値を書きます。すべての属性を書いたら <span class="script">]</span>
-でタグを閉じます。<br />
+<br />
+　When assigning tag attributes, always write the attribute name after the tag name or previous attribute name, leaving a single space. Write a = symbol after the attribute name, followed by the attribute value after it. When you have written down all the attributes, you can close the tag with <span class="script">]</span>
+<br />
 　たとえば、trans タグに time という属性を書きたい場合は、<span class="script">[trans time=0]</span> とします。また、さらに rule=trans vague=1 という属性を書きたい場合は
 <span class="script">[trans time=0 rule=trans vague=1]</span> とします。<br />
 　属性の値は "" で囲んでも囲まなくても同じです。たとえば、<span class="script">[trans time="0"]</span>と <span class="script">[trans time=0]</span>
