@@ -19,21 +19,24 @@
 <h1><a name="tag_overview" id="tag_overview">Tags overview</a></h1>
 <div class="para"><div>
 　Tags are enclosed between these [ ] square brackets. They are written in single-btyle alphanumeric characters.
-　A tag name is written after this  <span class="script">[</span> starting bracket. For example, a "trans" tag would
-written like this <span class="script">[trans</span> <br />
+A tag name is written after this  "<span class="script">[</span>" starting bracket. 
+For example, a "trans" tag would
+written like this "<span class="script">[trans</span>" <br />
 　Tags have attributes to assign tag options. For instances where no attributes need to be assigned to the tag, simply write an ending bracket <span class="script">]</span> after the tag name. For example
 <span class="script">[ct]</span>
 <br />
-　When assigning tag attributes, always write the attribute name after the tag name or previous attribute name, leaving a single space. Write a = symbol after the attribute name, followed by the attribute value after it. When you have written down all the attributes, you can close the tag with <span class="script">]</span>
+　When assigning tag attributes, always write the attribute name after the tag name or previous attribute name, leaving a single space. Write a = symbol after the attribute name, followed by the attribute value after it. When you have written down all the attributes, you can close the tag with a "<span class="script">]</span>"
 <br />
-　たとえば、trans タグに time という属性を書きたい場合は、<span class="script">[trans time=0]</span> とします。また、さらに rule=trans vague=1 という属性を書きたい場合は
-<span class="script">[trans time=0 rule=trans vague=1]</span> とします。<br />
-　属性の値は "" で囲んでも囲まなくても同じです。たとえば、<span class="script">[trans time="0"]</span>と <span class="script">[trans time=0]</span>
-は同じです。ただし、属性の値に空白を含むような場合は、"" で囲まなければなりません。たとえば、<span class="script">[font face="ＭＳ Ｐゴシック"]</span> です。<br />
-　また、属性の値に対し、&amp; を最初につけると、その後に書いたものを
-TJS 式として評価し、その結果を属性の値とします。たとえば、<span class="script">[trans time=&amp;f.clearTime]</span> とすると、<span class="script">f.clearTime</span> という変数の内容が、time
-属性の値となります。<br />
-　属性の値を省略すると (属性のうち '=' 以降を書かないと)、true という属性の値が指定されたと見なされます。たとえば、<span class="script">[playse loop storage="shock.wav"]</span> は、loop 属性の値が省略されていますが、これは <span class="script">[playse loop=true storage="shock.wav"]</span> と同じ意味になります。<br />
+　For example, if you want to write an attribute called "time" in the trans tag you write it like <span class="script">[trans time=0]</span> If you want an attribute like "rule=trans vague=1" in the tag you write it like
+<span class="script">[trans time=0 rule=trans vague=1]</span> <br />
+　Attribute values remain the same whetheror not it is enclosed in "".For example,<span class="script">[trans time="0"]</span> and <span class="script">[trans time=0]</span>
+are the same. However, for attributes with white spaces, it is required to enclosed them with "". An example would be <span class="script">[font face="ＭＳ Ｐゴシック"]</span><br />
+　In addition, when a &amp; is prefixed to an attribute value, anything written after that will be evaluated as a TJS expression. 
+For example, in <span class="script">[trans time=&amp;f.clearTime]</span>, the time atttribute will be assigned the value of<span class="script">f.clearTime</span> 
+<br />
+  If the value of an attribute is ommited (i.e. the attribute is not followed by an "="), it is assumed that the value of the attribute true is specified.
+  For example, in <span class="script">[playse loop storage="shock.wav"]</span>, the "loop" attribute value is omitted, but it is the same as writing <span class="script">[playse loop=true storage="shock.wav"]</span>.
+<br />
 </div></div>
 <h1><a name="tag_command" id="tag_command">コマンド行</a></h1>
 <div class="para"><div>
