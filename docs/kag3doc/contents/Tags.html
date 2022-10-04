@@ -38,11 +38,11 @@ For example, in <span class="script">[trans time=&amp;f.clearTime]</span>, the t
   For example, in <span class="script">[playse loop storage="shock.wav"]</span>, the "loop" attribute value is omitted, but it is the same as writing <span class="script">[playse loop=true storage="shock.wav"]</span>.
 <br />
 </div></div>
-<h1><a name="tag_command" id="tag_command">コマンド行</a></h1>
+<h1><a name="tag_command" id="tag_command">Command lines</a></h1>
 <div class="para"><div>
-　コマンド行は、@ で始まり、その次にタグ名と属性を記述するものです。<br />
-　一つの行には一つのタグのみを書くことができます。<br />
-　以下の二つの行は等価になります。<br />
+　Command lines begin with @ and the tag and attribute name is written after that.<br />
+　One command line can only have one tag.<br />
+　The following two lines are equal.<br />
 <br />
 <div class="bq">
 [trans time=0 rule=trans vague=1]<br />
@@ -50,15 +50,16 @@ For example, in <span class="script">[trans time=&amp;f.clearTime]</span>, the t
 </div>
 </div>
 </div>
-<h1><a name="tag_cond_attrib" id="tag_cond_attrib">cond 属性</a></h1>
+<h1><a name="tag_cond_attrib" id="tag_cond_attrib">cond attribute</a></h1>
 <div class="para"><div>
-　macro endmacro if else elsif endif ignore endignore iscript endscript のタグをのぞき、すべてのタグに cond 属性があります。<br />
-　cond 属性には TJS式 を指定し、この式を評価した結果が真の時のみにそのタグが実行されます。偽の時はタグは実行されません。<br />
+  With the exception of these tags: 
+　macro endmacro if else elsif endif ignore endignore iscript endscript, all tags have a "cond" attribute.<br />
+　A cond attribute designates a TJS expression, and only when the result of the expression returns true does the tag execute. If returned false The tag will not be executed.<br />
 <br />
-例 :<br />
+Example :<br />
 <div class="bq">
 [l cond=f.noskip]<br />
-; ↑ f.noskip が真の時のみ l タグを実行<br />
+; ↑ This tag executes only when f.noskip returns true<br />
 </div>
 </div>
 </div>
@@ -67,27 +68,27 @@ For example, in <span class="script">[trans time=&amp;f.clearTime]</span>, the t
 
 
 <div class="para"><div><br />
-<div class="taggenrehead">システム操作</div><br />
+<div class="taggenrehead">List of categories and tags</div><br />
 <table class="taglist" summary="システム操作 タグ一覧"><tbody>
-<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#autowc">autowc</a></span></td><td class="taglisteven">( 自動ウェイト )</td></tr>
-<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#clearsysvar">clearsysvar</a></span></td><td class="taglistodd">( システム変数の全消去 )</td></tr>
-<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#clickskip">clickskip</a></span></td><td class="taglisteven">( クリックスキップの設定 )</td></tr>
-<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#close">close</a></span></td><td class="taglistodd">( ウィンドウを閉じる )</td></tr>
-<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#cursor">cursor</a></span></td><td class="taglisteven">( マウスカーソルの変更 )</td></tr>
-<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#hidemessage">hidemessage</a></span></td><td class="taglistodd">( メッセージを消す )</td></tr>
-<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#loadplugin">loadplugin</a></span></td><td class="taglisteven">( プラグインの読み込み )</td></tr>
-<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#mappfont">mappfont</a></span></td><td class="taglistodd">( レンダリング済みフォントの割り当て )</td></tr>
-<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#nextskip">nextskip</a></span></td><td class="taglisteven">( 「次の選択肢まですすむ」の設定 )</td></tr>
-<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#quake">quake</a></span></td><td class="taglistodd">( 画面を揺らす )</td></tr>
-<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#rclick">rclick</a></span></td><td class="taglisteven">( 右クリックの設定 )</td></tr>
-<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#resetwait">resetwait</a></span></td><td class="taglistodd">( ウェイトの初期化 )</td></tr>
-<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#s">s</a></span></td><td class="taglisteven">( 停止する )</td></tr>
-<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#stopquake">stopquake</a></span></td><td class="taglistodd">( 画面揺らしの停止 )</td></tr>
-<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#title">title</a></span></td><td class="taglisteven">( タイトル指定 )</td></tr>
-<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#wait">wait</a></span></td><td class="taglistodd">( ウェイトを入れる )</td></tr>
-<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#waitclick">waitclick</a></span></td><td class="taglisteven">( クリックを待つ )</td></tr>
-<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#wc">wc</a></span></td><td class="taglistodd">( 文字数分のウェイトを入れる )</td></tr>
-<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#wq">wq</a></span></td><td class="taglisteven">( 画面揺らしの終了待ち )</td></tr>
+<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#autowc">autowc</a></span></td><td class="taglisteven">( Automatic wait )</td></tr>
+<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#clearsysvar">clearsysvar</a></span></td><td class="taglistodd">( Total removal of all system variables )</td></tr>
+<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#clickskip">clickskip</a></span></td><td class="taglisteven">( Click-Skip settings )</td></tr>
+<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#close">close</a></span></td><td class="taglistodd">( Closes the window )</td></tr>
+<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#cursor">cursor</a></span></td><td class="taglisteven">( Modifies the mouse cursor )</td></tr>
+<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#hidemessage">hidemessage</a></span></td><td class="taglistodd">( Hides the message  )</td></tr>
+<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#loadplugin">loadplugin</a></span></td><td class="taglisteven">( Loads the plugin )</td></tr>
+<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#mappfont">mappfont</a></span></td><td class="taglistodd">( Maps a rendered font )</td></tr>
+<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#nextskip">nextskip</a></span></td><td class="taglisteven">( "Skip to the next choice" settings )</td></tr>
+<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#quake">quake</a></span></td><td class="taglistodd">( Shakes the screen )</td></tr>
+<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#rclick">rclick</a></span></td><td class="taglisteven">( Right click settings )</td></tr>
+<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#resetwait">resetwait</a></span></td><td class="taglistodd">( Initialize wait )</td></tr>
+<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#s">s</a></span></td><td class="taglisteven">( Stop )</td></tr>
+<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#stopquake">stopquake</a></span></td><td class="taglistodd">( Stops the shaking of the screen )</td></tr>
+<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#title">title</a></span></td><td class="taglisteven">( Title naming )</td></tr>
+<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#wait">wait</a></span></td><td class="taglistodd">( To insert in wait )</td></tr>
+<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#waitclick">waitclick</a></span></td><td class="taglisteven">( Wait for click )</td></tr>
+<tr><td class="taglistodd"><span class="taglistlink"><a class="jump" href="#wc">wc</a></span></td><td class="taglistodd">( Insert in wait relative to the character count )</td></tr>
+<tr><td class="taglisteven"><span class="taglistlink"><a class="jump" href="#wq">wq</a></span></td><td class="taglisteven">( Wait for screen shaking to end )</td></tr>
 </tbody></table>
 <br />
 <div class="taggenrehead">フォーム操作</div><br />
