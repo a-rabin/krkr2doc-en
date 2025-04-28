@@ -8,6 +8,8 @@
 
 [Multiplatform API Documentation already translated and available here](https://ghpages.uyjulian.pw/multi_platform_design/apiref/)
 
-[We are looking for translators!](https://forums.fuwanovel.net/topic/25481-looking-for-translators-for-japanese-game-engine-documentation-and-forming-group-and-eventually-some-fantl/?tab=comments#comment-534785)
+
+
+[~~We are looking for translators!~~](https://forums.fuwanovel.net/topic/25481-looking-for-translators-for-japanese-game-engine-documentation-and-forming-group-and-eventually-some-fantl/?tab=comments#comment-534785)
 
 Thank you for your attention.
